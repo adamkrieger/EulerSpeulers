@@ -7,3 +7,4 @@ let Problem1 =
 
 let Problem2 =
     getFibonacciTermsUpTo [2;1] 4000000 |> List.filter (fun x -> x % 2 = 0) |> List.sum
+
