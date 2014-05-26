@@ -7,7 +7,7 @@ open Problems
 let main argv = 
     printfn "%A" argv
 
-    printfn "%A" Problem1
+    printfn "%A" Problem2
 
     let result = System.Console.ReadKey();
     
