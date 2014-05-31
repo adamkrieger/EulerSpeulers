@@ -14,3 +14,15 @@ let rec getFibonacciTermsUpTo (current:int list) x =
 
 let getFactors x =
     [1UL..x] |> List.filter (fun y -> x % y = 0UL)
+
+let incrementBy y x =
+    x + y
+
+let isEvenlyDivisibleByEach set x =
+    set |> List.forall (fun n -> x % n = 0)
+
+let rec iterateAndEvaluate initial iterator evaluator =
+    let next = iterator <| initial
+    match next |> evaluator with
+        | true -> next
+        | false -> iterateAndEvaluate next iterator evaluator
